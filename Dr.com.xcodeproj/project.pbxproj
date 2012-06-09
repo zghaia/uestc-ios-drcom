@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		45E7E7821582FF6B0085BC59 /* ZghaiaDrcom.m in Sources */ = {isa = PBXBuildFile; fileRef = 45E7E7811582FF6B0085BC59 /* ZghaiaDrcom.m */; };
 		B33D3FBD158214BC00569A9F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33D3FBC158214BC00569A9F /* UIKit.framework */; };
 		B33D3FBF158214BC00569A9F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33D3FBE158214BC00569A9F /* Foundation.framework */; };
 		B33D3FC1158214BC00569A9F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B33D3FC0158214BC00569A9F /* CoreGraphics.framework */; };
@@ -24,6 +25,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		45E7E7801582FF6B0085BC59 /* ZghaiaDrcom.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ZghaiaDrcom.h; sourceTree = "<group>"; };
+		45E7E7811582FF6B0085BC59 /* ZghaiaDrcom.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ZghaiaDrcom.m; sourceTree = "<group>"; };
 		B33D3FB8158214BC00569A9F /* Dr.com.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dr.com.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		B33D3FBC158214BC00569A9F /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		B33D3FBE158214BC00569A9F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
@@ -91,6 +94,8 @@
 		B33D3FC2158214BC00569A9F /* Dr.com */ = {
 			isa = PBXGroup;
 			children = (
+				45E7E7801582FF6B0085BC59 /* ZghaiaDrcom.h */,
+				45E7E7811582FF6B0085BC59 /* ZghaiaDrcom.m */,
 				B33D3FCB158214BC00569A9F /* AppDelegate.h */,
 				B33D3FCC158214BC00569A9F /* AppDelegate.m */,
 				B33D3FCE158214BC00569A9F /* ViewController.h */,
@@ -198,6 +203,7 @@
 				B33D3FC9158214BC00569A9F /* main.m in Sources */,
 				B33D3FCD158214BC00569A9F /* AppDelegate.m in Sources */,
 				B33D3FD0158214BC00569A9F /* ViewController.m in Sources */,
+				45E7E7821582FF6B0085BC59 /* ZghaiaDrcom.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +256,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -268,7 +274,7 @@
 				GCC_WARN_ABOUT_RETURN_TYPE = YES;
 				GCC_WARN_UNINITIALIZED_AUTOS = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 5.1;
+				IPHONEOS_DEPLOYMENT_TARGET = 5.0;
 				OTHER_CFLAGS = "-DNS_BLOCK_ASSERTIONS=1";
 				SDKROOT = iphoneos;
 				TARGETED_DEVICE_FAMILY = "1,2";
