@@ -17,8 +17,8 @@
     [request setHTTPMethod:@"POST"];  
     [request addValue:@"application/x-www-form-urlencoded" forHTTPHeaderField:@"Content-Type"];  
     [request setHTTPBody:[NSString stringWithFormat:@"DDDDD=%@&upass=%@&0MKKey=%B5%C7%C2%BC+Login", user, password]];  
-    NSData* data =  [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];  
-    NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
+    //NSData* data =  [NSURLConnection sendSynchronousRequest:request returningResponse:nil error:nil];  
+    //NSLog(@"%@",[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding]);
 }
 
 +(void)logoutOnSever:(NSString*)server

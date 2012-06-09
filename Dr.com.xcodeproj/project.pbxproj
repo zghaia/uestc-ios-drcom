@@ -22,6 +22,12 @@
 		B3BCFCD115826E4600125268 /* checkbox_checked.png in Resources */ = {isa = PBXBuildFile; fileRef = B3BCFCCB15826E4600125268 /* checkbox_checked.png */; };
 		B3BCFCD215826E4600125268 /* checkbox_nor.png in Resources */ = {isa = PBXBuildFile; fileRef = B3BCFCCC15826E4600125268 /* checkbox_nor.png */; };
 		B3BCFCD315826E4600125268 /* icon.png in Resources */ = {isa = PBXBuildFile; fileRef = B3BCFCCD15826E4600125268 /* icon.png */; };
+		B3D5319D15839F3F0089C081 /* InfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D5319B15839F3F0089C081 /* InfoViewController.m */; };
+		B3D5319E15839F3F0089C081 /* InfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D5319C15839F3F0089C081 /* InfoViewController.xib */; };
+		B3D531A11583A34C0089C081 /* InfoViewController_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D531A01583A34C0089C081 /* InfoViewController_iPhone.xib */; };
+		B3D531A51583A8F10089C081 /* LogoutController.m in Sources */ = {isa = PBXBuildFile; fileRef = B3D531A31583A8F10089C081 /* LogoutController.m */; };
+		B3D531A61583A8F10089C081 /* LogoutController.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D531A41583A8F10089C081 /* LogoutController.xib */; };
+		B3D531A81583AA4E0089C081 /* Logout_iPhone.xib in Resources */ = {isa = PBXBuildFile; fileRef = B3D531A71583AA4E0089C081 /* Logout_iPhone.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,6 +52,14 @@
 		B3BCFCCB15826E4600125268 /* checkbox_checked.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_checked.png; sourceTree = "<group>"; };
 		B3BCFCCC15826E4600125268 /* checkbox_nor.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = checkbox_nor.png; sourceTree = "<group>"; };
 		B3BCFCCD15826E4600125268 /* icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = icon.png; sourceTree = "<group>"; };
+		B3D5319A15839F3F0089C081 /* InfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = InfoViewController.h; sourceTree = "<group>"; };
+		B3D5319B15839F3F0089C081 /* InfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = InfoViewController.m; sourceTree = "<group>"; };
+		B3D5319C15839F3F0089C081 /* InfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController.xib; sourceTree = "<group>"; };
+		B3D531A01583A34C0089C081 /* InfoViewController_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = InfoViewController_iPhone.xib; sourceTree = "<group>"; };
+		B3D531A21583A8F10089C081 /* LogoutController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LogoutController.h; sourceTree = "<group>"; };
+		B3D531A31583A8F10089C081 /* LogoutController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LogoutController.m; sourceTree = "<group>"; };
+		B3D531A41583A8F10089C081 /* LogoutController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LogoutController.xib; sourceTree = "<group>"; };
+		B3D531A71583AA4E0089C081 /* Logout_iPhone.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = Logout_iPhone.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -102,6 +116,14 @@
 				B33D3FCF158214BC00569A9F /* ViewController.m */,
 				B33D3FD1158214BC00569A9F /* ViewController_iPhone.xib */,
 				B33D3FD4158214BC00569A9F /* ViewController_iPad.xib */,
+				B3D531A21583A8F10089C081 /* LogoutController.h */,
+				B3D531A31583A8F10089C081 /* LogoutController.m */,
+				B3D531A41583A8F10089C081 /* LogoutController.xib */,
+				B3D531A71583AA4E0089C081 /* Logout_iPhone.xib */,
+				B3D5319A15839F3F0089C081 /* InfoViewController.h */,
+				B3D5319B15839F3F0089C081 /* InfoViewController.m */,
+				B3D5319C15839F3F0089C081 /* InfoViewController.xib */,
+				B3D531A01583A34C0089C081 /* InfoViewController_iPhone.xib */,
 			);
 			path = Dr.com;
 			sourceTree = "<group>";
@@ -190,6 +212,10 @@
 				B3BCFCD115826E4600125268 /* checkbox_checked.png in Resources */,
 				B3BCFCD215826E4600125268 /* checkbox_nor.png in Resources */,
 				B3BCFCD315826E4600125268 /* icon.png in Resources */,
+				B3D5319E15839F3F0089C081 /* InfoViewController.xib in Resources */,
+				B3D531A11583A34C0089C081 /* InfoViewController_iPhone.xib in Resources */,
+				B3D531A61583A8F10089C081 /* LogoutController.xib in Resources */,
+				B3D531A81583AA4E0089C081 /* Logout_iPhone.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -204,6 +230,8 @@
 				B33D3FCD158214BC00569A9F /* AppDelegate.m in Sources */,
 				B33D3FD0158214BC00569A9F /* ViewController.m in Sources */,
 				45E7E7821582FF6B0085BC59 /* ZghaiaDrcom.m in Sources */,
+				B3D5319D15839F3F0089C081 /* InfoViewController.m in Sources */,
+				B3D531A51583A8F10089C081 /* LogoutController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
