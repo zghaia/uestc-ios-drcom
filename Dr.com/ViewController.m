@@ -3,7 +3,7 @@
 //  Dr.com
 //
 //  Created by Wang Rui on 12-6-8.
-//  Copyright (c) 2012年 Meet-Future. All rights reserved.
+//  Copyright (c) 2012年. All rights reserved.
 //
 
 #import "ViewController.h"
@@ -33,6 +33,17 @@
 	passwordInput.text = [[NSUserDefaults standardUserDefaults]objectForKey:@"UserPassword"];
 }
 
+- (BOOL)IsLocalSavedUserInfo{
+	NSString *chect = [[NSUserDefaults standardUserDefaults]objectForKey:@"IPAdress"];
+	
+	if (chect) {
+		return YES;
+	}
+	
+	return NO;
+}
+
+
 #pragma mark - UserAction
 
 - (IBAction)getMoreInfo:(id)sender{
@@ -55,12 +66,21 @@
 	UIButton *btn = (UIButton *)sender;
 	[btn setSelected:!btn.selected];
 	
-	[self saveUserInfoToLocal:btn.selected];
+	[[NSUserDefaults standardUserDefaults]setBool:btn.selected forKey:@"btnSelected"];
 }
 
 
 - (IBAction)login:(id)sender{
 	
+	[self saveUserInfoToLocal:saveMessageBtn.selected];
+	
+	[DrcomConnector defaultDrcomConnector].delegate = self;
+	[[DrcomConnector defaultDrcomConnector] loginOnSever:IPAdressInput.text userName:userNameInput.text password:passwordInput.text];	
+}
+
+#pragma mark - Drcom
+
+- (void)drcomDidLoginedSuccessfully{
 	NSString *nibname = nil;
 	
 	if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
@@ -69,14 +89,11 @@
 		nibname =  @"Logout_iPhone";
 	}
 
-	[ZghaiaDrcom loginOnSever:IPAdressInput.text userName:userNameInput.text password:passwordInput.text];
-	
 	LogoutController *ctr = [[LogoutController alloc]initWithNibName:nibname bundle:nil];
 	ctr.IPAdress = IPAdressInput.text;
 	[self.navigationController pushViewController:ctr animated:YES];
 	[ctr release];
 }
-
 
 #pragma mark - UITextFieldDelegate
 
@@ -93,6 +110,9 @@
 	// Do any additional setup after loading the view, typically from a nib.
 	
 	[self loadUserInfoFromLocal];
+	BOOL select = [[NSUserDefaults standardUserDefaults]boolForKey:@"btnSelected"];
+	[saveMessageBtn setSelected:select];
+	
 }
 
 - (void)viewDidUnload
@@ -103,6 +123,21 @@
 
 - (void)viewWillAppear:(BOOL)animated{
 	[self.navigationController setNavigationBarHidden:YES];
+	
+	if ([DrcomConnector defaultDrcomConnector].isLogined) {
+		NSString *nibname = nil;
+		
+		if (UI_USER_INTERFACE_IDIOM() == UIUserInterfaceIdiomPad) {
+			nibname =  @"LogoutController";
+		}else {
+			nibname =  @"Logout_iPhone";
+		}
+		
+		LogoutController *ctr = [[LogoutController alloc]initWithNibName:nibname bundle:nil];
+		ctr.IPAdress = IPAdressInput.text;
+		[self.navigationController pushViewController:ctr animated:YES];
+		[ctr release];
+	}
 }
 
 - (BOOL)shouldAutorotateToInterfaceOrientation:(UIInterfaceOrientation)interfaceOrientation

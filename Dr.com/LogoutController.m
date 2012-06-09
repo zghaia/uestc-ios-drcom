@@ -3,7 +3,7 @@
 //  Dr.com
 //
 //  Created by Wang Rui on 12-6-9.
-//  Copyright (c) 2012年 Meet-Future. All rights reserved.
+//  Copyright (c) 2012年 . All rights reserved.
 //
 
 #import "LogoutController.h"
@@ -14,7 +14,13 @@
 
 - (IBAction)logout:(id)sender{
 	
-	[ZghaiaDrcom logoutOnSever:self.IPAdress];
+	[DrcomConnector defaultDrcomConnector].delegate = self;
+	[[DrcomConnector defaultDrcomConnector] logoutOnSever:self.IPAdress];
+}
+
+#pragma mark - Drcom
+
+- (void)drcomDidLogoutedSuccessfully{
 	[self.navigationController popViewControllerAnimated:YES];
 }
 
@@ -23,8 +29,8 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        
-    }
+	
+	}
     return self;
 }
 
@@ -49,6 +55,7 @@
 - (void)dealloc{
 	[super dealloc];
 	[IPAdress release];
+	[DrcomConnector defaultDrcomConnector].delegate = nil;
 }
 
 @end
