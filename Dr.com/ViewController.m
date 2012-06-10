@@ -8,7 +8,6 @@
 
 #import "ViewController.h"
 #import "InfoViewController.h"
-#import "ZghaiaDrcom.h"
 #import "LogoutController.h"
 
 @implementation ViewController

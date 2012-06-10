@@ -1,9 +1,11 @@
 //
-//  DrcomConnector.h
+//  DrcomConnector.m
 //  Dr.com
 //
-//  Created by Wang Rui on 12-6-10.
-//  Copyright (c) 2012年. All rights reserved.
+//  Created by zghaia@gmail.com on 6/8/12.
+//  Edited by Wang Rui on 12-6-10.
+//  Copyright (c) 2012年 . All rights reserved.
+//
 //
 
 #import <Foundation/Foundation.h>

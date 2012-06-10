@@ -7,7 +7,6 @@
 //
 
 #import "LogoutController.h"
-#import "ZghaiaDrcom.h"
 
 @implementation LogoutController
 @synthesize IPAdress;
